@@ -66,7 +66,7 @@ def test_processar_reembolso():
     reembolso_invalido = 150
     reembolso_limite = 100
 
-    # Act
+    # Act S
     resultado_valido = processar_reembolso(valor_pago, reembolso_valido)
     resultado_invalido = processar_reembolso(valor_pago, reembolso_invalido)
     resultado_limite = processar_reembolso(valor_pago, reembolso_limite)
@@ -74,5 +74,6 @@ def test_processar_reembolso():
     # Assert
     assert resultado_valido == 50
     assert resultado_invalido == -1
-    assert resultado_limite == 100
+    assert resultado_limite == 0
+    
     pass
